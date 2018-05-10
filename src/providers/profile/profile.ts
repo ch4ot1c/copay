@@ -544,7 +544,7 @@ export class ProfileProvider {
         passphrase: opts.passphrase,
         entropySourcePath: opts.entropySourcePath,
         derivationStrategy: opts.derivationStrategy || 'BIP44',
-        account: opts.account || 0,
+        account: opts.account || 183,
         coin: opts.coin
       }, (err: any) => {
         if (err) {
@@ -576,7 +576,7 @@ export class ProfileProvider {
       this.logger.debug('Importing Wallet XPubKey');
 
       walletClient.importFromExtendedPublicKey(opts.extendedPublicKey, opts.externalSource, opts.entropySource, {
-        account: opts.account || 0,
+        account: opts.account || 183,
         derivationStrategy: opts.derivationStrategy || 'BIP44',
         coin: opts.coin
       }, (err: any) => {
@@ -759,7 +759,7 @@ export class ProfileProvider {
           walletClient.seedFromMnemonic(opts.mnemonic, {
             network,
             passphrase: opts.passphrase,
-            account: opts.account || 0,
+            account: opts.account || 183,
             derivationStrategy: opts.derivationStrategy || 'BIP44',
             coin: opts.coin
           });
@@ -772,7 +772,7 @@ export class ProfileProvider {
         try {
           walletClient.seedFromExtendedPrivateKey(opts.extendedPrivateKey, {
             network,
-            account: opts.account || 0,
+            account: opts.account || 183,
             derivationStrategy: opts.derivationStrategy || 'BIP44',
             coin: opts.coin,
           });
@@ -783,7 +783,7 @@ export class ProfileProvider {
       } else if (opts.extendedPublicKey) {
         try {
           walletClient.seedFromExtendedPublicKey(opts.extendedPublicKey, opts.externalSource, opts.entropySource, {
-            account: opts.account || 0,
+            account: opts.account || 183,
             derivationStrategy: opts.derivationStrategy || 'BIP44',
             coin: opts.coin
           });
@@ -799,7 +799,7 @@ export class ProfileProvider {
             network,
             passphrase: opts.passphrase,
             language: lang,
-            account: 0,
+            account: 183,
             coin: opts.coin
           });
         } catch (e) {
@@ -809,7 +809,7 @@ export class ProfileProvider {
             walletClient.seedFromRandomWithMnemonic({
               network,
               passphrase: opts.passphrase,
-              account: 0,
+              account: 183,
               coin: opts.coin
             });
           } else {
