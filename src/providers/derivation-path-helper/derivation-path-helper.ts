@@ -39,7 +39,7 @@ export class DerivationPathHelperProvider {
     };
 
     switch (arr[2]) {
-      case "0'":
+      case "183'":
         ret.networkName = 'livenet';
         break;
       case "1'":
