@@ -15,7 +15,7 @@ export class DerivationPathHelperProvider {
     var ret = {
       derivationStrategy: '',
       networkName: '',
-      account: 183 
+      account: 0
     };
 
     if (arr[0] != 'm')
@@ -29,7 +29,7 @@ export class DerivationPathHelperProvider {
         return {
           derivationStrategy: 'BIP45',
           networkName: 'livenet',
-          account: 183,
+          account: 0,
         }
       case "48'":
         ret.derivationStrategy = 'BIP48';
@@ -39,7 +39,7 @@ export class DerivationPathHelperProvider {
     };
 
     switch (arr[2]) {
-      case "0'":
+      case "183'":
         ret.networkName = 'livenet';
         break;
       case "1'":
@@ -54,7 +54,6 @@ export class DerivationPathHelperProvider {
       return false;
     ret.account = +match[1]
 
-    process.stdout.write(JSON.stringify(ret));
     return ret;
   };
 }
