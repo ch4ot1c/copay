@@ -6,7 +6,7 @@ export class DerivationPathHelperProvider {
   public defaultTestnet: string;
 
   public constructor() {
-    this.default = "m/44'/0'/0'";
+    this.default = "m/44'/183'/0'";
     this.defaultTestnet = "m/44'/1'/0'";
   }
 
